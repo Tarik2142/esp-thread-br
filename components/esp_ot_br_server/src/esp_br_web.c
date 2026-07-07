@@ -526,7 +526,7 @@ static esp_err_t esp_otbr_network_node_state_put_handler(httpd_req_t *req)
 {
     esp_err_t ret = ESP_OK;
     otError err = OT_ERROR_NONE;
-    cJSON *state = httpd_request_convert2_json(req, cJSON_Object);
+    cJSON *state = httpd_request_convert2_json(req, cJSON_String);
     if (cJSON_IsString(state)) {
         err = handle_ot_resource_node_state_put_request(state);
     } else {
